@@ -1,0 +1,50 @@
+<ion-toolbar>
+  <ion-buttons end>
+    <button (click)="startApp()">{{ continueText }}</button>
+  </ion-buttons>
+</ion-toolbar>
+
+<ion-content>
+  <ion-slides pager (slideChanged)="onSlideChanged($event)">
+    <ion-slide>
+      <h2>Welcome</h2>
+      <p>Four simple steps to find your Carpool.</p>
+      <div class="logo">
+        <img src="img/carpool.png"/>
+      </div>
+    </ion-slide>
+
+    <ion-slide>
+      <h2>Enter your profile</h2>
+      <p>Login/Signup and Complete your profile</p>
+      <div class="logo">
+        <img src="img/ionic-view.png"/>
+      </div>
+    </ion-slide>
+
+    <ion-slide>
+      <h2>Join a Carpool</h2>
+      <p>Search for a Carpool to Join or Create one!</p>
+      <div class="logo">
+        <img src="img/ionic-creator.png"/>
+      </div>
+    </ion-slide>
+
+    <ion-slide>
+      <h2>Finalize Carpool Group!</h2>
+      <p>Members communicate and agree on a Carpool group.</p>
+      <div class="logo">
+        <img src="img/ionic-platform.png"/>
+      </div>
+    </ion-slide>
+
+    <ion-slide>
+      <h2>Enjoy!</h2>
+      <p>Enjoy your rides in a greener Delhi.</p>
+      <div class="logo">
+        <img src="img/ionic-platform.png"/>
+      </div>
+    </ion-slide>
+
+  </ion-slides>
+</ion-content>

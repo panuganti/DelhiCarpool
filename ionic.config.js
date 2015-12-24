@@ -1,4 +1,5 @@
 module.exports = {
+  name: 'ionic-conference-app',
   proxies: null,
 
   // hooks execute before or after all project-related Ionic commands
@@ -23,7 +24,7 @@ module.exports = {
     buildCSSDir: 'css',
     buildFontsDir: 'fonts',
     appDir: 'app',
-    appSrcModule: 'app.js',
+    appSrcModule: 'app.ts',
     appBuildBundle: 'app.bundle.js',
     appSassSrc: ['app.ios.scss', 'app.md.scss'],
     appSassWatch: '**/*.scss',
