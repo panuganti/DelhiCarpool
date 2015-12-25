@@ -1,11 +1,6 @@
 {
-  "name": "ionic-conference-app",
-  "description": "Ionic Conference App",
-  "license": "Apache-2.0",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/driftyco/ionic-conference-app.git"
-  },
+  "name": "delhi-carpool",
+  "description": "Delhi Carpool",
   "dependencies": {
     "angular2": "2.0.0-alpha.52",
     "es6-promise": "3.0.2",
@@ -28,5 +23,8 @@
   "cordovaPlugins": [
     "cordova-plugin-whitelist"
   ],
-  "cordovaPlatforms": []
+  "cordovaPlatforms": [
+    "android",
+    "ios"
+  ]
 }

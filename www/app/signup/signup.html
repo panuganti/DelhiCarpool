@@ -1,31 +1,43 @@
-
 <ion-navbar *navbar>
-  <button menuToggle>
-    <icon menu></icon>
-  </button>
-  <ion-title>Signup</ion-title>
+    <button menuToggle>
+        <icon menu></icon>
+    </button>
+    <ion-title>Edit profile</ion-title>
 </ion-navbar>
 
 <ion-content class="login-page">
 
-  <ion-list>
-    <div class="logo">
-      <img src="img/appicon.svg">
-    </div>
+    <ion-list>
+        <!-- Look for better solution than using a spacer -->
+        <div class="spacer" style="width: auto; height: 40px;"></div>
 
-    <ion-input floating-label>
-      <ion-label primary>Username</ion-label>
-      <input type="text">
-    </ion-input>
+        <ion-input floating-label>
+            <ion-label primary>Phone Number</ion-label>
+            <input type="tel" placeholder="+91-987654632">
+        </ion-input>
 
-    <ion-input floating-label>
-      <ion-label primary>Password</ion-label>
-      <input type="password">
-    </ion-input>
+        <ion-input floating-label>
+            <ion-label primary>License Plate</ion-label>
+            <input type="text" placeholder="DL 01 9999">
+        </ion-input>
 
-    <div padding>
-      <button (click)="signup()" primary block>Create</button>
-    </div>
-  </ion-list>
+        <ion-input floating-label>
+            <ion-label primary>Home PinCode</ion-label>
+            <input type="number" placeholder="11007">
+        </ion-input>
+        
+        <ion-toggle ion-toggle-text="Male;Female" ng-model="gender">
+            Gender:
+        </ion-toggle>
+
+        <ion-input floating-label>
+            <ion-label primary>Age</ion-label>
+            <input type="number" placeholder="30">
+        </ion-input>
+
+        <div padding>
+            <button (click)="signup()" primary block assertive>Find Carpools</button>
+        </div>
+    </ion-list>
 
 </ion-content>

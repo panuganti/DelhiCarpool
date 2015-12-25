@@ -1,5 +1,5 @@
 module.exports = {
-  name: 'ionic-conference-app',
+  name: 'delhi-carpool',
   proxies: null,
 
   // hooks execute before or after all project-related Ionic commands

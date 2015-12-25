@@ -16,6 +16,7 @@ $categories: (
 }
 
 .schedule {
+  background: url(../../img/lotusTemple.jpg);
   @each $track, $value in auxiliary-categories() {
    ion-item-sliding[track=#{$track}] ion-item-content {
      border-left: 2px solid $value;
@@ -23,3 +24,4 @@ $categories: (
    }
   }
 }
+

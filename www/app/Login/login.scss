@@ -8,3 +8,16 @@
 .login-page .logo img {
   max-width: 150px;
 }
+
+.login-page {
+   background: url(../../img/bBlue.jpg) no-repeat center;
+}
+
+// To hide scroll bars. Is there a better solution ?
+::-webkit-scrollbar { 
+    display: none; 
+}
+
+::-webkit-input-placeholder { /* WebKit browsers */
+ text-align:right;
+ }

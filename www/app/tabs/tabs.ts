@@ -2,23 +2,24 @@ import {Page} from 'ionic-framework/ionic';
 import {SchedulePage} from '../schedule/schedule';
 import {SpeakerListPage} from '../speaker-list/speaker-list';
 import {MapPage} from '../map/map';
-import {AboutPage} from '../about/about';
+import {ContactsPage} from '../contacts/contacts';
+import {ProfilePage} from '../profile/profile';
 
 
 @Page({
   templateUrl: 'app/tabs/tabs.html'
 })
 export class TabsPage {
-  tab1Root: any;
-  tab2Root: any;
-  tab3Root: any;
-  tab4Root: any;
+  homeTab: any;
+  carpoolTab: any;
+  profileTab: any;
+  contactsTab: any;
 
   constructor() {
     // set the root pages for each tab
-    this.tab1Root = SchedulePage;
-    this.tab2Root = SpeakerListPage;
-    this.tab3Root = MapPage;
-    this.tab4Root = AboutPage;
+    this.homeTab = SchedulePage;
+    this.carpoolTab = SpeakerListPage;
+    this.profileTab = ProfilePage;
+    this.contactsTab = ContactsPage;
   }
 }
