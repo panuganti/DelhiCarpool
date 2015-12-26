@@ -1,5 +1,5 @@
 import {App, IonicApp, Config} from 'ionic-framework/ionic';
-import {ConferenceData} from './providers/conference-data';
+import {ServerData} from './providers/server-data';
 import {UserData} from './providers/user-data';
 import {TabsPage} from './tabs/tabs';
 import {LoginPage} from './login/login';
@@ -9,18 +9,15 @@ import {TutorialPage} from './tutorial/tutorial';
 
 @App({
   templateUrl: 'app/app.html',
-  providers: [ConferenceData, UserData]
+  providers: [ServerData, UserData]
 })
 class ConferenceApp {
     app: IonicApp;
     root: any;
     pages: any;
     
-  constructor(app: IonicApp, confData: ConferenceData, config: Config) {
+  constructor(app: IonicApp, confData: ServerData, config: Config) {
     this.app = app;
-
-    // load the conference data
-    confData.load();
 
     // We plan to add auth to only show the login page if not logged in
     this.root = LoginPage;

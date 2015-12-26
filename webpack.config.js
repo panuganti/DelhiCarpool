@@ -22,7 +22,8 @@ module.exports = {
         test: /\.ts$/,
         loader: 'awesome-typescript',
         query: {
-          'doTypeCheck': false
+          'doTypeCheck': false,
+          'tsconfig': 'tsconfig.json'
         },
         include: [path.join(__dirname, paths.wwwDir)],
         exclude: /node_modules/
@@ -34,6 +35,8 @@ module.exports = {
       }
     ]
   },
+  // Source maps support (or 'inline-source-map' also works)
+  devtool: 'inline-source-map',
   resolve: {
     alias: {
       'web-animations.min': 'ionic-framework/js/web-animations.min',

@@ -1,11 +1,17 @@
-
 <ion-navbar *navbar>
-  <button menuToggle>
-    <icon menu></icon>
-  </button>
-  <ion-title>Profile</ion-title>
+    <button menuToggle>
+        <icon menu></icon>
+    </button>
+    <ion-title>{{user.Name}}</ion-title>
 </ion-navbar>
 
-<ion-content>
-    It's lonely out here. Let's invite some friends'
+<ion-content padding>
+    <p class="speaker-pic">
+        <img [src]="user.ProfilePic" [alt]="user.Name">
+    </p>
+    <p>{{user.About}}</p>
+
+    <div padding>
+        <button (click)="edit()" primary block assertive>Edit</button>
+    </div>
 </ion-content>

@@ -1,0 +1,13 @@
+{
+    "Carpools": [
+        {
+            "Name": "",
+            "Id": "",
+            "Members": [
+                "member1",
+                "member2",
+                "member3"
+            ]
+        }
+    ]
+}

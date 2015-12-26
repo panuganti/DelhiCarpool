@@ -1,6 +1,6 @@
 import {Page} from 'ionic-framework/ionic';
 
 @Page({
-  templateUrl: 'app/about/about.html'
+  templateUrl: 'app/carpools/carpools.html'
 })
-export class AboutPage {}
+export class CarpoolPage {}

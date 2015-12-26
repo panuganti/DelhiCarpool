@@ -1,7 +1,6 @@
 import {Page} from 'ionic-framework/ionic';
-import {SchedulePage} from '../schedule/schedule';
-import {SpeakerListPage} from '../speaker-list/speaker-list';
-import {MapPage} from '../map/map';
+import {HomePage} from '../home/home';
+import {CarpoolPage} from '../carpools/carpools';
 import {ContactsPage} from '../contacts/contacts';
 import {ProfilePage} from '../profile/profile';
 
@@ -17,8 +16,8 @@ export class TabsPage {
 
   constructor() {
     // set the root pages for each tab
-    this.homeTab = SchedulePage;
-    this.carpoolTab = SpeakerListPage;
+    this.homeTab = HomePage;
+    this.carpoolTab = CarpoolPage;
     this.profileTab = ProfilePage;
     this.contactsTab = ContactsPage;
   }

@@ -1,0 +1,46 @@
+<ion-navbar *navbar>
+    <button menuToggle>
+        <icon menu></icon>
+    </button>        
+<ion-title>Your Carpools</ion-title>
+</ion-navbar>
+<ion-content>
+    <!-- TODO: Add content with sample carpools -->
+  <ion-list-header [hidden]="carpools > 0">
+      No Sessions Found
+  </ion-list-header>
+    <button fab danger fab-bottom fab-right style="z-index: 999; box-shadow: 3px 3px 30px #888888;">
+        <icon add></icon>        
+    </button>
+    
+      <ion-list [hidden]="carpools === 0">
+
+    <ion-item-group *ngFor="#carpool of carpools" [hidden]="carpool.hide">
+
+      <ion-item-divider sticky>
+        {{carpool.time}}
+      </ion-item-divider>
+
+      <ion-item-sliding #slidingItem>
+
+        <button ion-item (click)="goToCarpoolDetail(carpool)">
+          <h3>{{carpool.name}}</h3>
+          <p>
+            {{carpool.timeStart}} &mdash;
+            {{carpool.location}}
+          </p>
+        </button>
+
+        <ion-item-options>
+          <button favorite (click)="addFavorite(slidingItem, session)" *ngIf="segment === 'all'">
+            Favorite
+          </button>
+        </ion-item-options>
+
+      </ion-item-sliding>
+
+    </ion-item-group>
+
+  </ion-list>
+
+</ion-content>

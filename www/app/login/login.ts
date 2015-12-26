@@ -7,8 +7,8 @@ import {SignupPage} from '../signup/signup';
   templateUrl: 'app/login/login.html',
 })
 export class LoginPage {
-  nav: any;
-  app: any;
+  nav: NavController;
+  app: IonicApp;
   
   constructor(nav: NavController, app: IonicApp) {
     this.nav = nav;
@@ -16,10 +16,10 @@ export class LoginPage {
   }
 
   login() {
-    this.nav.push(TabsPage);
+    this.nav.push(TabsPage, {}, {}, null);
   }
 
   signup() {
-    this.nav.push(SignupPage);
+    this.nav.push(SignupPage, {}, {}, null);
   }
 }
