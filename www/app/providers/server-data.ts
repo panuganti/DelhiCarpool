@@ -29,7 +29,6 @@ export class ServerData {
       this.http.get('app/data/carpools.json').subscribe(res => {
         // we've got back the raw data, now generate the core schedule data
         // and save the data for later reference
-        this.data = this.processData(res.json());
         resolve(this.data);
       });
     });
@@ -49,7 +48,6 @@ export class ServerData {
       this.http.get('app/data/userprofile.json').subscribe(res => {
         // we've got back the raw data, now generate the core schedule data
         // and save the data for later reference
-        this.data = this.processData(res.json());
         resolve(this.data);
       });
     });

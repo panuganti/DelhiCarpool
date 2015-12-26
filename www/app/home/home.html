@@ -1,46 +1,82 @@
 <ion-navbar *navbar>
     <button menuToggle>
         <icon menu></icon>
-    </button>        
-<ion-title>Your Carpools</ion-title>
-</ion-navbar>
-<ion-content>
-    <!-- TODO: Add content with sample carpools -->
-  <ion-list-header [hidden]="carpools > 0">
-      No Sessions Found
-  </ion-list-header>
-    <button fab danger fab-bottom fab-right style="z-index: 999; box-shadow: 3px 3px 30px #888888;">
-        <icon add></icon>        
     </button>
+    <ion-title>Your Carpools</ion-title>
+</ion-navbar>
+<ion-content padding="false" overflow-scroll="false" scroll="false" class="home-page">
     
-      <ion-list [hidden]="carpools === 0">
+    <!-- TODO: Add content with sample carpools -->
+    <ion-list-header style="background:white;" [hidden]="true" >
+        You are not yet part of any Carpool
+        <br> Create a new Carpool or Join an existing one
+    </ion-list-header>
 
-    <ion-item-group *ngFor="#carpool of carpools" [hidden]="carpool.hide">
+    <button [hidden]="carpools === 0" fab danger fab-bottom fab-right style="z-index: 999; box-shadow: 3px 3px 30px #888888;">
+        <icon add></icon>
+    </button>
 
-      <ion-item-divider sticky>
-        {{carpool.time}}
-      </ion-item-divider>
+    <ion-list>
 
-      <ion-item-sliding #slidingItem>
+        <ion-list>
+            <ion-item-divider sticky>
+                8 AM
+            </ion-item-divider>
+            <ion-item>
+                <ion-avatar item-left>
+                    <img src="img/appicon.png">
+                </ion-avatar>
+                <h3>Saket Vihar Guys</h3>
+                <p>
+                    From: Saket Vihar
+                    <br> To: New Delhi Railway Station
+                </p>
+                <p> <b>Seats Available: 2 </b></p>
+            </ion-item>
 
-        <button ion-item (click)="goToCarpoolDetail(carpool)">
-          <h3>{{carpool.name}}</h3>
-          <p>
-            {{carpool.timeStart}} &mdash;
-            {{carpool.location}}
-          </p>
-        </button>
+            <div class="spacer"  style="width: auto; height: 6px;"> </div>
 
-        <ion-item-options>
-          <button favorite (click)="addFavorite(slidingItem, session)" *ngIf="segment === 'all'">
-            Favorite
-          </button>
-        </ion-item-options>
+            <ion-item-divider sticky>
+                9 AM
+            </ion-item-divider>
+            <ion-item>
+                <ion-avatar item-left>
+                    <img src="img/appicon.png">
+                </ion-avatar>
+                <h3>Saket Vihar Guys</h3>
+                <p>
+                    From: Saket Vihar
+                    <br> To: New Delhi Railway Station
+                </p>
+            </ion-item>
+        </ion-list>
 
-      </ion-item-sliding>
 
-    </ion-item-group>
+        <ion-item-group *ngFor="#carpool of carpools" [hidden]="carpool.hide">
 
-  </ion-list>
+            <ion-item-divider sticky>
+                {{carpool.time}}
+            </ion-item-divider>
+
+            <ion-item-sliding #slidingItem>
+
+                <button ion-item (click)="goToCarpoolDetail(carpool)">
+                    <h3>{{carpool.name}}</h3>
+                    <p>
+                        {{carpool.timeStart}} &mdash; {{carpool.location}}
+                    </p>
+                </button>
+
+                <ion-item-options>
+                    <button favorite (click)="addFavorite(slidingItem, session)" *ngIf="segment === 'all'">
+                        Favorite
+                    </button>
+                </ion-item-options>
+
+            </ion-item-sliding>
+
+        </ion-item-group>
+
+    </ion-list>
 
 </ion-content>

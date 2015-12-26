@@ -1,11 +1,87 @@
-
 <ion-navbar *navbar>
-  <button menuToggle>
-    <icon menu></icon>
-  </button>
-  <ion-title>Carpools</ion-title>
+    <button menuToggle>
+        <icon menu></icon>
+    </button>
+    <ion-segment [(ngModel)]="segment">
+        <ion-segment-button value="map">
+            Map
+        </ion-segment-button>
+        <ion-segment-button value="list">
+            List
+        </ion-segment-button>
+    </ion-segment>
+
+    <ion-buttons end>
+        <button>
+            <icon ios="ion-ios-funnel-outline" md="ion-md-funnel"></icon>
+        </button>
+    </ion-buttons>
+
 </ion-navbar>
 
-<ion-content>
-    Page Under Construction
+<ion-content padding="false" overflow-scroll="false" scroll="false" class="carpools-page">
+    
+    <div [hidden]="true" id="map"></div>
+    <div [hidden]="false">
+        <ion-searchbar primary [(ngModel)]="queryText" placeholder="Search">
+        </ion-searchbar>
+        <ion-list>
+            <ion-item-divider sticky>
+                8 AM
+            </ion-item-divider>
+            <ion-item>
+                <ion-avatar item-left>
+                    <img src="img/appicon.png">
+                </ion-avatar>
+                <h3>Saket Vihar Guys</h3>
+                <p>
+                    From: Saket Vihar
+                    <br> To: New Delhi Railway Station
+                </p>
+                <p> <b>Seats Available: 2 </b></p>
+            </ion-item>
+            <ion-item>
+                <ion-avatar item-left>
+                    <img src="img/appicon.png">
+                </ion-avatar>
+                <h3>Saket Vihar Guys</h3>
+                <p>
+                    From: Rajiv Chowk
+                    <br> To: Connaught Place
+                </p>
+            </ion-item>
+
+            <div class="spacer"  style="width: auto; height: 6px;"> </div>
+
+            <ion-item-divider sticky>
+                9 AM
+            </ion-item-divider>
+            <ion-item>
+                <ion-avatar item-left>
+                    <img src="img/appicon.png">
+                </ion-avatar>
+                <h3>Saket Vihar Guys</h3>
+                <p>
+                    From: Saket Vihar
+                    <br> To: New Delhi Railway Station
+                </p>
+            </ion-item>
+            <ion-item>
+                <ion-avatar item-left>
+                    <img src="img/appicon.png">
+                </ion-avatar>
+                <h3>Saket Vihar Guys</h3>
+                <p>
+                    From: Rajiv Chowk
+                    <br> To: Connaught Place
+                </p>
+            </ion-item>
+
+        </ion-list>
+    </div>
+
+    <button fab danger fab-bottom fab-right style="z-index: 999; box-shadow: 3px 3px 30px #888888;">
+        <icon add></icon>
+    </button>
+
 </ion-content>

@@ -2,16 +2,25 @@
     <button menuToggle>
         <icon menu></icon>
     </button>
-    <ion-title>{{user.Name}}</ion-title>
+    <ion-title>Gaurav</ion-title>
+    <ion-title></ion-title>
 </ion-navbar>
 
-<ion-content padding>
-    <p class="speaker-pic">
-        <img [src]="user.ProfilePic" [alt]="user.Name">
-    </p>
-    <p>{{user.About}}</p>
+<ion-content padding class="login-page">
+
+    <ion-list style="background:white;">
+        <!-- Look for better solution than using a spacer -->
+        <div class="spacer" style="width: auto; height: 40px;"></div>
+
+        <p>Phone Number: +91-987654632</p> 
+        <p><span>License Plate: </span> <span>DL 01 9999</span> </p> 
+        <p>Home PinCode: 11007 </p>
+        <p> Male </p>
+        <p> Age: 30 </p>
+
+    </ion-list>
 
     <div padding>
-        <button (click)="edit()" primary block assertive>Edit</button>
+        <button primary block assertive>Edit</button>
     </div>
 </ion-content>
